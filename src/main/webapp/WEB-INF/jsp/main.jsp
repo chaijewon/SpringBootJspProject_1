@@ -38,6 +38,23 @@ p{
 		  </div>
       </c:forEach>
      </div>
+     <div class="row text-center" style="margin-top: 10px">
+       <ul class="pagination">
+         <c:if test="${startPage>1 }">
+          <li><a href="/?page=${startPage-1 }">&lt;</a></li>
+         </c:if>
+         
+         <c:forEach var="i" begin="${startPage }" end="${endPage }">
+           <li class="${curpage==i?'active':'' }">
+            <a href="/?page=${i }">${i }</a>
+           </li>
+         </c:forEach>
+         
+         <c:if test="${endPage<totalpage }">
+          <li><a href="/?page=${endPage+1 }">&gt;</a></li>
+         </c:if>
+       </ul>
+     </div>
    </div>
 </body>
 </html>

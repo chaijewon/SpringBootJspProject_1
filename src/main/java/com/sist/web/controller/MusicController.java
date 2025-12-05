@@ -25,7 +25,7 @@ public class MusicController {
 		  page="1";
 	  int curpage=Integer.parseInt(page);
 	  int rowSize=12;
-	  int start=(curpage-1)*rowSize;
+	  int start=(curpage-1)*rowSize+1;
 	  int end=curpage*rowSize;
 	  
 	  Map map=new HashMap();
